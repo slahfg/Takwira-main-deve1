@@ -1,0 +1,37 @@
+{
+  "name": "takwira",
+  "version": "0.0.0",
+  "private": true,
+  "main":"app.js",
+  "scripts": {
+    "start": "node app",
+    "app": "nodemon a",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run app\" \"npm run client\""
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser-xml": "^1.1.0",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.0",
+    "express-xml-bodyparser": "^0.3.0",
+    "http": "0.0.0",
+    "http-errors": "~1.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.3",
+    "morgan": "~1.9.1",
+ 
+    "pdfkit": "^0.11.0",
+    "redis": "^3.0.2",
+    "socket.io": "^2.3.0",
+    "validator": "^12.2.0"
+  }
+}

@@ -1,0 +1,59 @@
+.App {
+  text-align: center;
+  font-family: "Courier New", monospace;
+  width: 100%;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 42px;
+}
+
+.passwords {
+  list-style: none;
+  padding: 0;
+  font-size: 32px;
+  margin-bottom: 2em;
+}
+
+.more {
+  font-size: 32px;
+  font-family: "Courier New", monospace;
+  border: 2px solid #000;
+  background-color: #fff;
+  padding: 10px 25px;
+}
+
+.more:hover {
+  background-color: #FDD836;
+}
+.more:active {
+  background-color: #FFEFA9;
+}
+.alert{
+  padding: 0.8rem;
+  margin:1rem 0;
+  opacity: 0.9;
+  background: var(--light-color);
+  color: #333;
+}
+.alert-primary{
+  background: var(--primary-color);
+  color: #fff;
+}
+.alert-light{
+  background: var(--light-color);
+  color: #333;
+}
+.alert-dark{
+  background: var(--dark-color);
+  color: #fff;
+}
+.alert-danger{
+  background: var(--danger-color);
+  color: #fff;
+}
+.alert-success{
+  background:var(--success-color) ;
+  color: #fff;
+}
