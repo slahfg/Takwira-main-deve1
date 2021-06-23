@@ -18,6 +18,7 @@ import FormAddOwner from "./admin/owner/ajout/formAddOwner"
 import AdminListeReservation from "./admin/reservation/list/list"
 import ListeReservation from "./proprietaire/reservation/list/list"
 import setAuthToken from "./components/utils/setAuthToken";
+import StadeDetail from "./pages/StadeDetail";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token)
@@ -58,11 +59,13 @@ function App() {
             <Route path="/ListeReservation" exact component={ListeReservation} />
             <Route path="/AdminListeStade" exact component={AdminListeStade} />
             <Route path="/AdminListeOwner" exact component={AdminListeOwner} />
+           
             <Route path="/AdminListeReservation" exact component={AdminListeReservation} />
             <Route path="/register" exact component={Register} />
             <Route path="/login" exact component={Login} />
             <Route path="/loginAdmin" exact component={LoginAdmin} />
             <Route path="/AdminAddOwner" exact component={FormAddOwner} />
+             <Route path="/stadiumDetail" exact component={StadeDetail} />
             {/* <Route path="/login" exact component={Login} /> */}
 
             {/* <Route component={NotFound} /> */}

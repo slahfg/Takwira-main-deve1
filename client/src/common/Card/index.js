@@ -8,15 +8,16 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import CardDialog from "../CardDialog";
-
+ import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
   },
 });
 
-export default function ImgMediaCard({ image, description, title }) {
+export default function ImgMediaCard({ image, description, title,id }) {
   const classes = useStyles();
+ 
   console.log({ image, description, title });
   return (
     <>
@@ -40,9 +41,18 @@ export default function ImgMediaCard({ image, description, title }) {
         </CardActionArea>
         <CardActions>
           <CardDialog />
-          <Button size="small" color="primary">
-            Learn More
-          </Button>
+          <Link
+            to={{
+              pathname: "/stadiumDetail",
+              state: {
+                StadeID:id,
+              },
+            }}
+          >
+            <Button size="small" color="primary">
+              Learn More
+            </Button>
+          </Link>
         </CardActions>
       </Card>
     </>

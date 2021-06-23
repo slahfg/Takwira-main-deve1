@@ -1,16 +1,13 @@
-import React from "react";
-import Banner from "./Banner";
+import React, { useState } from "react";
+
 import CardSlider from "../../common/CardSlider";
 import About from "./About";
-import { ThemeProvider, Container } from "@material-ui/core";
-import theme from "../../theme";
 
-import Navbar from "../../components/Navbar"
-
-export default function Home() {
-  const connection = true;
-  const stadiums = [
-     {
+export default function StadeDetail(props) {
+  console.log("eee");
+  var Stade;
+   const stadiums = [
+    {
       id: 1,
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSepfMya4Ta--se0RhZVS6KUuiPosodqHco52yVN8OkmZxyvw6J_YMIsryyzxFSXEKbwMg&usqp=CAU",
@@ -39,19 +36,17 @@ export default function Home() {
       description: "Stade Gason de 90m² prés de l'ISIMM",
     },
   ];
-
+console.log(props.location);
+if (props.location && props.location.state && props.location.state.StadeID)
+  Stade=stadiums.find((x) => x.id === props.location.state.StadeID);
   
-
   return (
-    <ThemeProvider theme={theme}>
-    <Navbar connected={connection} />
-    <Container maxWidth="md">
     <div>
-      <Banner />
-      <About />
-      <CardSlider stadiums={stadiums} />
+      <About
+        description={Stade?.description}
+        title={Stade?.title}
+        img={Stade?.image}
+      />
     </div>
-    </Container>
-    </ThemeProvider>
   );
 }
