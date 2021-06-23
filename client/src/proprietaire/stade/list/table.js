@@ -5,12 +5,14 @@ import axios from "axios"
 
 
 
-const DatatablePage = () => {
+const DatatablePage = (stade ) => {
  
-
   
-    const data = {
-      columns: [
+
+  console.log('ssss', stade.stade.result)
+  const std = stade.stade.result;
+  const data = {
+    columns: [
       {
         label: 'label',
         field: 'label',
@@ -28,7 +30,7 @@ const DatatablePage = () => {
         field: 'discrption',
         sort: 'asc',
         width: 200
-      }, 
+      },
       {
         label: 'locationHelper ',
         field: 'locationHelper',
@@ -79,7 +81,7 @@ const DatatablePage = () => {
      
    
     ],
-
+  
   
     
   };
@@ -91,9 +93,7 @@ const DatatablePage = () => {
       hover
       data={data}
     >
-   
-
-
+ 
     </MDBDataTable>
   );
 }

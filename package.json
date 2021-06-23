@@ -2,7 +2,7 @@
   "name": "takwira",
   "version": "0.0.0",
   "private": true,
-  "main":"app.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app",
     "app": "nodemon a",
@@ -28,7 +28,6 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.3",
     "morgan": "~1.9.1",
- 
     "pdfkit": "^0.11.0",
     "redis": "^3.0.2",
     "socket.io": "^2.3.0",
